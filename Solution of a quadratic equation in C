@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a,b,c,D;
+	float x,y;
+	printf("Enter the Coefficent of X2,X and Constant: ");
+	scanf("%d %d %d",&a,&b,&c);
+	D = ((b*b)-(4*a*c));
+	if(D>=0)
+	{
+	    if(D>0)
+	    {
+	    	printf("The roots are Real and unique");
+	    	x = (-b + sqrt(D) )/(2*a);
+		    y = (-b - sqrt(D) )/(2*a);
+		    printf("\nThe roots are %f and %f",x,y);
+		}
+		else
+		{
+			printf("The roots are same");
+	        x = -(b/(2*a));
+	        printf("\nThe roots are %f and %f",x,x);
+		}
+    }
+	else
+	   printf("The Roots are Imaginary");
+	    
+	return 0;       
+}
